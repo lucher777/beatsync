@@ -1,0 +1,15 @@
+site_name: beatsync
+site_description: Dual-scale cardiac event cross-correlation and cycle-slip-resilient clock synchronization for multi-device wearables
+repo_url: https://github.com/peacekange/beatsync
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Tutorial: tutorial.md
+  - API Reference: api.md
+  - Contributing: ../CONTRIBUTING.md
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences

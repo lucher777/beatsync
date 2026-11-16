@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beatsync"
+version = "0.1.0"
+description = "Dual-scale cardiac event cross-correlation and cycle-slip-resilient clock synchronization for asynchronous multi-device wearables"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Kang Liu", email = "peacekange@gmail.com"}
+]
+keywords = [
+    "wearable computing",
+    "clock synchronization",
+    "ECG",
+    "PPG",
+    "crystal drift",
+    "cross-correlation",
+    "Theil-Sen regression",
+    "biosignal processing",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "matplotlib>=3.7",
+]
+
+[project.scripts]
+beatsync = "beatsync.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/peacekange/beatsync"
+Documentation = "https://peacekange.github.io/beatsync/"
+Repository = "https://github.com/peacekange/beatsync"
+Issues = "https://github.com/peacekange/beatsync/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+beatsync = ["data/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -p no:asyncio"

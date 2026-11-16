@@ -1,0 +1,9 @@
+method_id,method_label,median_error_s,mean_max_error_s,rate_lt_100ms,rate_lt_50ms,rate_lt_30ms,heldout_median_error_s,heldout_rate_lt_150ms,n_segments
+motion_theil_sen,Motion Envelope + Theil-Sen,43.171667,42.911815,0.013333,0.013333,0.0,42.989179,0.0,75
+coarse_ibi_ols,Coarse Lock + Nearest-Beat OLS,0.039622,0.235246,0.506667,0.24,0.146667,0.405851,0.013333,75
+unshifted_top1_theil_sen,Unshifted Window Top-1 + Theil-Sen,22.634834,32.203415,0.333333,0.32,0.28,22.573197,0.173333,75
+ablation_no_coarse,Ablation: Without Coarse Lock,15.667703,34.02511,0.36,0.36,0.293333,15.515032,0.173333,75
+ablation_coarse_ols,Ablation: Coarse Lock + OLS,0.015351,0.067802,0.853333,0.653333,0.466667,0.107702,0.386667,75
+ablation_no_rescue,Ablation: Without Sub-Period Rescue,0.008469,0.02229,0.986667,0.92,0.8,0.086128,0.466667,75
+ablation_no_ptt,Ablation: Without PTT Prior,0.008855,0.019865,1.0,0.92,0.8,0.265854,0.013333,75
+beatsync_full,beatsync (Full Pipeline),0.008855,0.019865,1.0,0.92,0.8,0.084842,0.466667,75
