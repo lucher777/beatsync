@@ -49,10 +49,10 @@ dev = [
 beatsync = "beatsync.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/peacekange/beatsync"
-Documentation = "https://peacekange.github.io/beatsync/"
-Repository = "https://github.com/peacekange/beatsync"
-Issues = "https://github.com/peacekange/beatsync/issues"
+Homepage = "https://github.com/lucher777/beatsync"
+Documentation = "https://lucher777.github.io/beatsync/"
+Repository = "https://github.com/lucher777/beatsync"
+Issues = "https://github.com/lucher777/beatsync/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]

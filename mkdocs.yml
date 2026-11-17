@@ -1,6 +1,6 @@
 site_name: beatsync
 site_description: Dual-scale cardiac event cross-correlation and cycle-slip-resilient clock synchronization for multi-device wearables
-repo_url: https://github.com/peacekange/beatsync
+repo_url: https://github.com/lucher777/beatsync
 theme:
   name: material
 nav:

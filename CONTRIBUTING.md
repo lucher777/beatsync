@@ -5,7 +5,7 @@ Thank you for your interest in contributing to `beatsync`. Contributions coverin
 ## Development Setup
 
 ```bash
-git clone https://github.com/peacekange/beatsync.git
+git clone https://github.com/lucher777/beatsync.git
 cd beatsync
 pip install -e .[dev]
 ```
