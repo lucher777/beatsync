@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -161,7 +162,7 @@ def test_cli_subprocess_help_exits_zero() -> None:
     pkg_src = str(Path(__file__).resolve().parents[1] / "src")
     proc = subprocess.run(
         [sys.executable, "-m", "beatsync.cli", "--help"],
-        env={"PYTHONPATH": pkg_src},
+        env={**os.environ, "PYTHONPATH": pkg_src},
         capture_output=True,
         text=True,
         timeout=30,
