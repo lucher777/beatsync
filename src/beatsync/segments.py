@@ -438,6 +438,10 @@ def verify_scipy_equivalence(
     a = encode_gaussian_impulses(r_sub, dur, grid_fs_hz=fs, sigma_s=0.035)
     b = encode_gaussian_impulses(p_sub, dur, grid_fs_hz=fs, sigma_s=0.035)
 
+    # Warm up FFT and direct kernels before wall-clock timing on shared CI runners
+    _ = fft_xcorr(a, b, -15.0, 15.0, grid_fs_hz=fs)
+    _ = direct_xcorr_reference(a, b, -15.0, 15.0, grid_fs_hz=fs)
+
     t0 = time.perf_counter()
     lags_fft, corr_fft = fft_xcorr(a, b, -15.0, 15.0, grid_fs_hz=fs)
     fft_ms = (time.perf_counter() - t0) * 1000.0
